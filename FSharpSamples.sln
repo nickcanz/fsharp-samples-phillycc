@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpSnippets", "FSharpSnippets\FSharpSnippets.fsproj", "{08623569-4EDB-4CCE-8810-22F6A2BDB29F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpSamples", "fsharpsamples\FSharpSamples.fsproj", "{08623569-4EDB-4CCE-8810-22F6A2BDB29F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
