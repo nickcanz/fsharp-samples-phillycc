@@ -11,8 +11,9 @@ type Coffee(size:int<oz>, hasMilk:bool, hasSugar:bool) =
         String.Format("New Coffee {0}, with milk: {1}, with sugar: {2}", (int(size)), hasMilk, hasSugar)
 
 let (!+) (condiment:string) (caf:Coffee) =
-    caf.Extras <- Seq.append caf.Extras [condiment]
-    caf
+    caf |> caf.Extras <- Seq.append caf.Extras [condiment] yield caf
+
+
 let (!!+) (condiment:string) (caf:Coffee) =
     caf.Extras <- Seq.append caf.Extras [condiment;condiment]
     caf
@@ -24,7 +25,7 @@ let ``Make Coffee`` size hasMilk hasSugar =
     new Coffee(size, hasMilk, hasSugar)
 
 
-let nicksCoffee = 
+let nicksCoffee =
     ``Make Coffee`` 16<oz> milk (not sugar)
         |> !+ "Nutmeg"
         |> !!+ "Whipped Cream"
